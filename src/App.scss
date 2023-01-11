@@ -1,0 +1,139 @@
+/* Colors */
+$primary: #84739A;
+$secondary: #CBB7C3;
+$third: #E9DCD8;
+$fourth: #F5E5BC;
+$fifth: #CEB4A1;
+
+.App {
+  text-align: center;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.castle-container {
+  position: relative;
+  color: white;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  p {
+    font-family: 'Great Vibes', serif;
+    font-weight: 400;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 65%;
+    animation: appear 5s forwards linear;
+  }
+}
+
+.zoom-animation {
+  animation: zoom-in 3s ease;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+  &.auto-flex{
+    div {
+      box-sizing: border-box;
+      flex: auto;
+    }
+  }
+}
+
+.markElement {
+  border: solid 2px red;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .App {
+    padding: 40px;
+  }
+
+  .castle-container {
+    width: auto;
+    height: 100%;
+
+    p {
+      font-size: 1.8em;
+    }
+  }
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {}
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {}
+
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .App {
+    padding: 80px;
+  }
+
+  .castle-container {
+    width: 800px;
+    height: 800px;
+
+    p {
+      font-size: 5em;
+    }
+  }
+}

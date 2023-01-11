@@ -1,5 +1,6 @@
-import castle from './assets/disney_castle.png';
-import './App.css';
+import React from 'react';
+import Home from './components/home';
+//import CountdownTimer from 'react-deadline';
 //<img src={castle} className="App-logo" alt="logo" />
 /*<a
   className="App-link"
@@ -9,15 +10,9 @@ import './App.css';
 ></a>*/
 
 function App() {
+  const [countDown, onChangeTimer] = React.useState("");
   return (
-    <div className="App">
-      <div class="castle-container">
-        <img class="middle zoom-animation " src={castle} alt="Castle" />
-        <div class="middle">
-          <p class="castle-text">Texto de invitacion</p>
-        </div>
-      </div>
-    </div>
+    <Home></Home>
   );
 }
 
