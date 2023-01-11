@@ -11,6 +11,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div class="castle-container">
+        <img class="middle zoom-animation " src={castle} alt="Castle" />
+        <div class="middle">
+          <p class="castle-text">Texto de invitacion</p>
+        </div>
+      </div>
     </div>
   );
 }
