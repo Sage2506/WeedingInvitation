@@ -10,7 +10,6 @@ import Home from './components/home';
 ></a>*/
 
 function App() {
-  const [countDown, onChangeTimer] = React.useState("");
   return (
     <Home></Home>
   );

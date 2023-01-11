@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import castle from '../assets/disney_castle.png'
 import '../App.scss';
+import Countdown from 'react-countdown';
 
 export default class Home extends Component {
   constructor(props){
@@ -27,7 +28,9 @@ export default class Home extends Component {
         <section className='auto-flex'>
           <div className=' markElement'>
             <h1>Fecha</h1>
-
+            <Countdown date={'2023-11-03T18:00:00'}>
+              <p>Finished</p>
+            </Countdown>
           </div>
           <div className=' markElement'>
             <h1>Lugar</h1>
