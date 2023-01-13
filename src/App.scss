@@ -45,7 +45,8 @@ section {
   justify-content: center;
   gap: 10px 20px;
   flex-wrap: wrap;
-  &.auto-flex{
+
+  &.auto-flex {
     div {
       box-sizing: border-box;
       flex: auto;
@@ -56,6 +57,10 @@ section {
 
 .markElement {
   border: solid 2px red;
+}
+
+.tick {
+  font-size: 3em;
 }
 
 @keyframes zoom-in {
@@ -81,6 +86,8 @@ section {
     opacity: 1;
   }
 }
+
+
 
 
 /* For extremely small screen devices (595px and below) */
@@ -121,7 +128,18 @@ section {
 @media only screen and (min-width: 768px) {}
 
 /* Big screen devices (889px and above) */
-@media only screen and (min-width: 889px) {}
+@media only screen and (min-width: 889px) {
+  .App {
+    padding: 70px;
+  }
+
+  .castle-container {
+
+    p {
+      font-size: 5em;
+    }
+  }
+}
 
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {

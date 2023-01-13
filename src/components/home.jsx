@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import castle from '../assets/disney_castle.png'
 import '../App.scss';
-import Countdown from 'react-countdown';
+import FlipCountdown from '@rumess/react-flip-countdown';
+import moment from 'moment/moment';
 
 export default class Home extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      countDown : ''
+      endDate: '2023-11-03 18:00:00'
     }
   }
+
   render() {
+    const { endDate } = this.state
     return (
       <div className="App">
         <section>
@@ -28,9 +31,6 @@ export default class Home extends Component {
         <section className='auto-flex'>
           <div className=' markElement'>
             <h1>Fecha</h1>
-            <Countdown date={'2023-11-03T18:00:00'}>
-              <p>Finished</p>
-            </Countdown>
           </div>
           <div className=' markElement'>
             <h1>Lugar</h1>
@@ -201,7 +201,22 @@ export default class Home extends Component {
             </ol>
           </div>
         </section>
-
+        <section>
+          <div className="markElement">
+            <FlipCountdown
+              monthTitle={'Meses'}
+              dayTitle={'Dias'}
+              hourTitle={'Horas'}
+              minuteTitle={'Minutos'}
+              secondTitle={'Segundos'}
+              endAtZero
+              hideYear
+              hideMonth={moment.duration(moment().diff(endDate)).months() === 0}
+              hideDay={moment.duration(moment().diff(endDate)).months() === 0 && moment.duration(moment().diff(endDate)).days() === 0}
+              endAt={endDate}
+            />
+          </div>
+        </section>
       </div>
     );
   }
