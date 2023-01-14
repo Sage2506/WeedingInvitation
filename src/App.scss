@@ -4,12 +4,21 @@ $secondary: #CBB7C3;
 $third: #E9DCD8;
 $fourth: #F5E5BC;
 $fifth: #CEB4A1;
+$pink: #F8E3E8;
+$cursive-font: 'Great Vibes', serif;
+
+body {
+  background-image: url("./assets/lanterns.png"), linear-gradient($pink, $secondary);
+  background-size: 400px;
+}
 
 .App {
   text-align: center;
   display: flex;
   gap: 40px;
   flex-direction: column;
+  margin: 10px;
+  border: solid black;
 }
 
 .castle-container {
@@ -23,7 +32,7 @@ $fifth: #CEB4A1;
   }
 
   p {
-    font-family: 'Great Vibes', serif;
+    font-family: $cursive-font;
     font-weight: 400;
     position: absolute;
     top: 48%;
@@ -31,6 +40,38 @@ $fifth: #CEB4A1;
     transform: translate(-50%);
     max-width: 65%;
     animation: appear 5s forwards linear;
+  }
+}
+
+.title-image-description {
+  img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    margin: 10px;
+  }
+
+  p {
+    line-height: 1em;
+  }
+
+  >div {
+    display: flex;
+  }
+}
+
+.line-spacing {
+  &-0 {
+    p {
+      line-height: 0;
+    }
+  }
+}
+
+.cursive {
+  p {
+    font-family: $cursive-font;
   }
 }
 
@@ -47,22 +88,55 @@ section {
   flex-wrap: wrap;
 
   &.auto-flex {
-    div {
+    >div {
       box-sizing: border-box;
-      flex: auto;
+      flex: 1;
     }
 
   }
 }
 
 .markElement {
+  border: solid red 2px;
+}
 
+.card {
+  background-color: $pink;
+  padding: 10px;
   border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: grid;
+
+  >div {
+    margin: auto;
+  }
 }
 
 .tick {
   font-size: 3em;
+}
+
+.date-presentation {
+  display: flex;
+  gap: 5px;
+
+  p {
+    align-self: center;
+  }
+
+  >p {
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+  }
+
+  >div {
+    line-height: 0;
+
+    h6 {
+      font-size: 40px;
+      margin: 28px 2px;
+    }
+  }
 }
 
 @keyframes zoom-in {
@@ -95,7 +169,7 @@ section {
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
   .App {
-    padding: 40px;
+    padding: 30px;
   }
 
   .castle-container {
@@ -106,47 +180,95 @@ section {
       font-size: 1.8em;
     }
   }
+
+  section {
+    &.auto-flex {
+      >div {
+        flex: auto;
+      }
+
+    }
+  }
+
+  .title-image-description>div {
+    flex-flow: column;
+  }
+}
+
+/* For extremely small screen devices (595px and below) */
+@media only screen and (max-width: 595px) {
+  .card {
+    p {
+      font-size: 1.5em;
+    }
+  }
 }
 
 /* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {}
-
-/* Big screen devices (889px and above) */
-@media only screen and (min-width: 889px) {}
-
-/* Extra big screen devices (1200px and above) */
-@media only screen and (min-width: 1200px) {}
-
-/* For extremely small screen devices (595px and below) */
-@media only screen and (max-width: 595px) {}
-
-/* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {}
-
-/* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {}
-
-/* Big screen devices (889px and above) */
-@media only screen and (min-width: 889px) {
+@media only screen and (min-width: 600px) {
   .App {
-    padding: 70px;
+    padding: 60px;
+
   }
 
   .castle-container {
 
     p {
-      font-size: 5em;
+      top: 47%;
+      font-size: 3em;
+    }
+  }
+
+  .card p {
+    font-size: 20px;
+
+  }
+
+  .cursive {
+    p {
+      font-size: 34px;
+    }
+  }
+
+  section {
+    &.auto-flex {
+      >div {
+        flex: auto;
+      }
+
     }
   }
 }
 
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+  .castle-container {
+    p {
+      top: 47%;
+      font-size: 4em;
+    }
+  }
+
+  .card p {
+    font-size: 24px;
+  }
+
+  .cursive {
+    p {
+      font-size: 34px;
+    }
+  }
+
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {}
+
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {
   .App {
-    padding: 80px;
+    padding: 70px;
+
   }
 
   .castle-container {
@@ -156,5 +278,13 @@ section {
     p {
       font-size: 5em;
     }
+  }
+
+  .card p {
+    font-size: 28px;
+  }
+
+  body {
+    background-size: 1200px;
   }
 }
