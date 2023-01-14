@@ -69,6 +69,7 @@ export default class Home extends Component {
                 <div>
                   <p>Iglesia de santo niño de la salud</p>
                   <p>Lic. Benito Juárez S/N, Mochicahui,<br /> 81257 Los Mochis, Sin.</p>
+                  <p className='underline'>6:00 PM</p>
                 </div>
               </div>
             </div>
@@ -80,8 +81,11 @@ export default class Home extends Component {
                   <img src="https://scontent.fcul3-1.fna.fbcdn.net/v/t39.30808-6/294104357_531264968730214_4213898863780266269_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHkIQcud61AeuyJEmN_CpxhMI8HJGtfCjYwjwcka18KNnQTleDJ7-5l3jPBn564_eE&_nc_ohc=J-Wx5e55dT0AX-zAUMz&_nc_ht=scontent.fcul3-1.fna&oh=00_AfBE5HpS2WU4QvPBW_iWNPxwsBsE1jhc6ovNU1zzX29zEA&oe=63C7B628" alt="Imagen de iglesia" />
                 </a>
                 <div>
-                  <p>Jardin de fiestas La Finca</p>
+                  <p><a href="https://goo.gl/maps/rt371ZzSwYd68z7T9"><span class="material-symbols-outlined">
+                    location_on
+                  </span>Jardin de fiestas La Finca</a></p>
                   <p>Residencial Las Misiones, <br />81293 Los Mochis, Sin.</p>
+                  <p className='underline'>8:00 PM</p>
                 </div>
               </div>
             </div>
@@ -114,7 +118,6 @@ export default class Home extends Component {
           </div>
         </section>
         <section className='auto-flex' >
-
           <div className='card'>
             <div className='cursive line-spacing-0'>
               <h3>Novios</h3>
@@ -127,7 +130,6 @@ export default class Home extends Component {
         <section className='auto-flex'>
           <div className='card'>
             <ol>
-              <li>Lugar iglesia</li>
               <li>Hora misa</li>
               <li>Lugar fiesta</li>
               <li>Recepcion</li>

@@ -5,11 +5,15 @@ $third: #E9DCD8;
 $fourth: #F5E5BC;
 $fifth: #CEB4A1;
 $pink: #F8E3E8;
+
 $cursive-font: 'Great Vibes', serif;
+$playfair-display-serif: 'Payfair Display', serif;
+$playfair-display-sans: 'Payfair Display', sans-serif;
 
 body {
   background-image: url("./assets/lanterns.png"), linear-gradient($pink, $secondary);
   background-size: 400px;
+  font-family: $playfair-display-serif;
 }
 
 .App {
@@ -101,9 +105,9 @@ section {
 }
 
 .card {
-  background-color: $pink;
+  background-color: white;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   display: grid;
 
@@ -119,7 +123,7 @@ section {
 .date-presentation {
   display: flex;
   gap: 5px;
-
+  font-family: $playfair-display-serif;
   p {
     align-self: center;
   }
@@ -134,11 +138,14 @@ section {
 
     h6 {
       font-size: 40px;
-      margin: 28px 2px;
+      margin: 30px 2px;
     }
   }
 }
 
+.underline {
+  text-decoration: underline;
+}
 @keyframes zoom-in {
   0% {
     transform: scale(0.5, 0.5);
