@@ -16,6 +16,36 @@ body {
   font-family: $playfair-display-serif;
 }
 
+.corner {
+  position: absolute;
+
+  &.top-left {
+    left: 0px;
+    top: 0px;
+  }
+
+  &.top-right {
+    -webkit-transform: scaleX(-1);
+    right: 0px;
+    top: 0px;
+    transform: scaleX(-1);
+  }
+
+  &.bottom-left {
+    -webkit-transform: scaleY(-1);
+    bottom: 0px;
+    left: 0px;
+    transform: scaleY(-1);
+  }
+
+  &.bottom-right {
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    bottom: 0px;
+    right: 0px;
+    transform: scaleX(-1) scaleY(-1);
+  }
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -23,6 +53,7 @@ body {
   flex-direction: column;
   margin: 10px;
   border: solid black;
+  position: relative;
 }
 
 .castle-container {
@@ -124,6 +155,7 @@ section {
   display: flex;
   gap: 5px;
   font-family: $playfair-display-serif;
+
   p {
     align-self: center;
   }
@@ -146,6 +178,7 @@ section {
 .underline {
   text-decoration: underline;
 }
+
 @keyframes zoom-in {
   0% {
     transform: scale(0.5, 0.5);
@@ -170,13 +203,20 @@ section {
   }
 }
 
-
-
-
 /* For extremely small screen devices (595px and below) */
 @media only screen and (max-width: 595px) {
+  .card {
+    p {
+      font-size: 1.5em;
+    }
+  }
+
   .App {
     padding: 30px;
+  }
+
+  .corner {
+    width: 200px;
   }
 
   .castle-container {
@@ -202,17 +242,8 @@ section {
   }
 }
 
-/* For extremely small screen devices (595px and below) */
-@media only screen and (max-width: 595px) {
-  .card {
-    p {
-      font-size: 1.5em;
-    }
-  }
-}
-
 /* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 596px) {
   .App {
     padding: 60px;
 
@@ -245,6 +276,10 @@ section {
 
     }
   }
+
+  .corner {
+    width: 260px;
+  }
 }
 
 /* Medium screen devices (768px and above) */
@@ -265,11 +300,18 @@ section {
       font-size: 34px;
     }
   }
+  .corner {
+    width: 330px;
+  }
 
 }
 
 /* Big screen devices (889px and above) */
-@media only screen and (min-width: 889px) {}
+@media only screen and (min-width: 889px) {
+  .corner {
+    width: 330px;
+  }
+}
 
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {
@@ -293,5 +335,9 @@ section {
 
   body {
     background-size: 1200px;
+  }
+
+  .corner {
+    width: 400px;
   }
 }

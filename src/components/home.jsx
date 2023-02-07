@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import castle from '../assets/disney_castle.png'
+import corner from '../assets/Corner.svg'
+import church from '../assets/Church.jpeg'
+import saloon from '../assets/Saloon.jpg'
 import '../App.scss';
 import FlipCountdown from '@rumess/react-flip-countdown';
 import moment from 'moment/moment';
@@ -31,6 +34,10 @@ export default class Home extends Component {
     const { endDate } = this.state
     return (
       <div className="App">
+        <img src={corner} alt="corner image" className='corner top-left' />
+        <img src={corner} alt="corner image" className='corner top-right' />
+        <img src={corner} alt="corner image" className='corner bottom-left' />
+        <img src={corner} alt="corner image" className='corner bottom-right' />
         <section>
           <div className="castle-container ">
             <img className="zoom-animation" src={castle} alt="Castle" />
@@ -64,12 +71,20 @@ export default class Home extends Component {
             <div className='title-image-description'>
               <div>
                 <a href="https://goo.gl/maps/nnva6wHn28t4sBaa8">
-                  <img src="https://lh3.googleusercontent.com/p/AF1QipN3FVxpYn4NPrOtSqMeN9y2WBRdbe4xmTsrb1xF=s1360-w1360-h1020" alt="Imagen de iglesia" />
+                  <img src={church} alt="Imagen de iglesia" />
                 </a>
                 <div>
-                  <p>Iglesia de santo niño de la salud</p>
+                  <p>
+                    <a href="https://goo.gl/maps/nnva6wHn28t4sBaa8">
+                      <span className="material-symbols-outlined">
+                        location_on
+                      </span>
+                      Iglesia de santo niño de la salud
+                    </a>
+                  </p>
                   <p>Lic. Benito Juárez S/N, Mochicahui,<br /> 81257 Los Mochis, Sin.</p>
-                  <p className='underline'>6:00 PM</p>
+                  <hr style={{ 'width': '80%' }} />
+                  <p>6:00 PM</p>
                 </div>
               </div>
             </div>
@@ -78,14 +93,20 @@ export default class Home extends Component {
             <div className='title-image-description'>
               <div>
                 <a href="https://goo.gl/maps/rt371ZzSwYd68z7T9">
-                  <img src="https://scontent.fcul3-1.fna.fbcdn.net/v/t39.30808-6/294104357_531264968730214_4213898863780266269_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHkIQcud61AeuyJEmN_CpxhMI8HJGtfCjYwjwcka18KNnQTleDJ7-5l3jPBn564_eE&_nc_ohc=J-Wx5e55dT0AX-zAUMz&_nc_ht=scontent.fcul3-1.fna&oh=00_AfBE5HpS2WU4QvPBW_iWNPxwsBsE1jhc6ovNU1zzX29zEA&oe=63C7B628" alt="Imagen de iglesia" />
+                  <img src={saloon} alt="Imagen de iglesia" />
                 </a>
                 <div>
-                  <p><a href="https://goo.gl/maps/rt371ZzSwYd68z7T9"><span class="material-symbols-outlined">
-                    location_on
-                  </span>Jardin de fiestas La Finca</a></p>
+                  <p>
+                    <a href="https://goo.gl/maps/rt371ZzSwYd68z7T9">
+                      <span className="material-symbols-outlined">
+                        location_on
+                      </span>
+                      Jardin de fiestas La Finca
+                    </a>
+                  </p>
                   <p>Residencial Las Misiones, <br />81293 Los Mochis, Sin.</p>
-                  <p className='underline'>8:00 PM</p>
+                  <hr style={{ 'width': '80%' }} />
+                  <p>8:00 PM</p>
                 </div>
               </div>
             </div>
@@ -127,11 +148,17 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
+        <section className='auto-flex' >
+          <div className='card'>
+            <div className='cursive'>
+              <h3>Mensaje de los novios</h3>
+              <p>La vida es locomoción, si no estas en movimiento no estas viviendo; pero llega un momento en que tienes que huir de las cosas y tienes que empezar a correr hacia algo, mantenerse en movimiento, incluso si el camino no esta iluminado confía en que encontraras tu camino..!!</p>
+            </div>
+          </div>
+        </section>
         <section className='auto-flex'>
           <div className='card'>
             <ol>
-              <li>Hora misa</li>
-              <li>Lugar fiesta</li>
               <li>Recepcion</li>
               <li>Cita mamadora</li>
               <li>Cuenta de banco para transferencias</li>
@@ -149,6 +176,7 @@ export default class Home extends Component {
         </section>
         <section>
           <div>
+            <h1>Solo faltan</h1>
             <FlipCountdown
               size={this.counterSize()}
               monthTitle={'Meses'}
