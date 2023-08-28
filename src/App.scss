@@ -70,14 +70,17 @@ body {
   }
 
   p {
-    font-family: $cursive-font;
-    font-weight: 400;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%);
-    max-width: 65%;
+    //    text-shadow: 1px 1px 2px black, 0 0 1em white;
     animation: appear 5s forwards linear;
+    color: black;
+    font-family: $cursive-font;
+    font-size: 2em;
+    left: 50%;
+    margin-left: -2%;
+    max-width: 65%;
+    position: absolute;
+    top: 26%;
+    transform: translate(-50%);
   }
 }
 
@@ -250,9 +253,9 @@ section {
     height: 100%;
 
     p {
-      top: 30%;
-      margin-left: -3px;
-      font-size: 1.3em;
+      top: 24%;
+      margin-left: -7px;
+      font-size: 1.5em;
     }
   }
 
@@ -280,8 +283,8 @@ section {
   .castle-container {
 
     p {
-      top: 32%;
-      font-size: 3.5em;
+      top: 25%;
+      font-size: 3em;
     }
   }
 
@@ -315,7 +318,7 @@ section {
 @media only screen and (min-width: 768px) {
   .castle-container {
     p {
-      top: 33%;
+      top: 24%;
       font-size: 3.5em;
     }
   }
@@ -344,8 +347,7 @@ section {
 
   .castle-container {
     p {
-      top: 33%;
-      font-size: 3.5em;
+      font-size: 4em;
     }
   }
 }
@@ -362,7 +364,9 @@ section {
     height: 800px;
 
     p {
-      font-size: 3.5em;
+      font-size: 4em;
+      top: 26%;
+
     }
   }
 

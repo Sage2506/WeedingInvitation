@@ -67,7 +67,7 @@ export default class Home extends Component {
               <div>
                 <p>NOV</p>
                 <h6>03</h6>
-                <p>2022</p>
+                <p>2023</p>
               </div>
               <p>8:00 PM</p>
             </div>
@@ -87,21 +87,21 @@ export default class Home extends Component {
           <div className='card'>
             <div className='cursive line-spacing-0'>
               <h3>Padres</h3>
+              <p>Paul Ibarra Fuentes</p>
+              <p>&</p>
+              <p style={{ 'lineHeight': 'normal' }}>Imelda Patricia Humaran Ocampo</p>
+              <hr style={{ 'width': '80%' }} />
               <p style={{ 'lineHeight': 'normal' }}>German Eduardo Salazar Quintero</p>
               <p>&</p>
               <p>Sara Marisa Aranda Quintero</p>
-              <hr style={{ 'width': '80%' }} />
-              <p style={{ 'lineHeight': 'normal' }}>Imelda Patricia Humaran Ocampo</p>
-              <p>&</p>
-              <p>Paul Ibarra Fuentes</p>
             </div>
           </div>
           <div className='card'>
             <div className='cursive line-spacing-0'>
               <h3>Padrinos</h3>
-              <p>Kenya Inzunza Aceviz</p>
-              <p>&</p>
               <p>Oliver Ibarra Fuentes</p>
+              <p>&</p>
+              <p>Kenia Lizbeth Inzunza Aceviz</p>
               <hr style={{ 'width': '80%' }} />
               <p style={{ 'lineHeight': 'normal' }}>Marco Antonio Aranda Quintero</p>
               <p>&</p>
@@ -175,7 +175,6 @@ export default class Home extends Component {
             <p>Codigo de vestimenta:</p>
             <p>Formal</p>
             <p>No niños</p>
-            <a href='https://api.whatsapp.com/send/?phone=5216672726823&text&type=phone_number&app_absent=0'>Confirmar Invitacion</a>
           </div>
         </section>
         <section>
