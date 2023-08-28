@@ -34,10 +34,10 @@ export default class Home extends Component {
     const { endDate } = this.state
     return (
       <div className="App">
-        <img src={corner} alt="corner image" className='corner top-left' />
-        <img src={corner} alt="corner image" className='corner top-right' />
-        <img src={corner} alt="corner image" className='corner bottom-left' />
-        <img src={corner} alt="corner image" className='corner bottom-right' />
+        <img src={corner} alt="top left" className='corner top-left' />
+        <img src={corner} alt="top right" className='corner top-right' />
+        <img src={corner} alt="botton left" className='corner bottom-left' />
+        <img src={corner} alt="bottom right" className='corner bottom-right' />
         <section>
           <div className="castle-container">
             <img className="zoom-animation" src={castle} alt="Castle" />
@@ -70,6 +70,42 @@ export default class Home extends Component {
                 <p>2022</p>
               </div>
               <p>8:00 PM</p>
+            </div>
+          </div>
+        </section>
+        <section className='auto-flex' >
+          <div className='card'>
+            <div className='cursive line-spacing-0'>
+              <h3>Novios</h3>
+              <p>Paulina Ibarra Humaran</p>
+              <p>&</p>
+              <p style={{ 'lineHeight': 'normal' }}>Germán Eduardo Salazar Aranda</p>
+            </div>
+          </div>
+        </section>
+        <section className='auto-flex'>
+          <div className='card'>
+            <div className='cursive line-spacing-0'>
+              <h3>Padres</h3>
+              <p style={{ 'lineHeight': 'normal' }}>German Eduardo Salazar Quintero</p>
+              <p>&</p>
+              <p>Sara Marisa Aranda Quintero</p>
+              <hr style={{ 'width': '80%' }} />
+              <p style={{ 'lineHeight': 'normal' }}>Imelda Patricia Humaran Ocampo</p>
+              <p>&</p>
+              <p>Paul Ibarra Fuentes</p>
+            </div>
+          </div>
+          <div className='card'>
+            <div className='cursive line-spacing-0'>
+              <h3>Padrinos</h3>
+              <p>Kenya Inzunza Aceviz</p>
+              <p>&</p>
+              <p>Oliver Ibarra Fuentes</p>
+              <hr style={{ 'width': '80%' }} />
+              <p style={{ 'lineHeight': 'normal' }}>Marco Antonio Aranda Quintero</p>
+              <p>&</p>
+              <p>Mirna Selene Sainz Sánchez</p>
             </div>
           </div>
         </section>
@@ -119,42 +155,8 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
-        <section className='auto-flex'>
-          <div className='card'>
-            <div className='cursive line-spacing-0'>
-              <h3>Padres</h3>
-              <p>German Eduardo Salazar Quintero</p>
-              <p>&</p>
-              <p>Sara Marisa Aranda Quintero</p>
-              <hr style={{ 'width': '80%' }} />
-              <p style={{ 'lineHeight': 'normal' }}>Imelda Patricia Humaran Ocampo</p>
-              <p>&</p>
-              <p>Paul Ibarra Fuentes</p>
-            </div>
-          </div>
-          <div className='card'>
-            <div className='cursive line-spacing-0'>
-              <h3>Padrinos</h3>
-              <p>Kenya Inzunza Aceviz</p>
-              <p>&</p>
-              <p>Oliver Ibarra Fuentes</p>
-              <hr style={{ 'width': '80%' }} />
-              <p>Marco Antonio Aranda Quintero</p>
-              <p>&</p>
-              <p>Mirna Selene Sainz Sánchez</p>
-            </div>
-          </div>
-        </section>
-        <section className='auto-flex' >
-          <div className='card'>
-            <div className='cursive line-spacing-0'>
-              <h3>Novios</h3>
-              <p>Paulina Ibarra Humaran</p>
-              <p>&</p>
-              <p>Germán Eduardo Salazar Aranda</p>
-            </div>
-          </div>
-        </section>
+
+
         <section className='auto-flex'>
           <div className='card'>
             <p>Regalo en efectivo</p>
@@ -172,11 +174,13 @@ export default class Home extends Component {
           <div className='card'>
             <p>Codigo de vestimenta:</p>
             <p>Formal</p>
+            <p>No niños</p>
+            <a href='https://api.whatsapp.com/send/?phone=5216672726823&text&type=phone_number&app_absent=0'>Confirmar Invitacion</a>
           </div>
         </section>
         <section>
           <div>
-            <h1>Vivieron felices para siempre</h1>
+            <h1>Vivieron felices por siempre</h1>
             <FlipCountdown
               size={this.counterSize()}
               monthTitle={'Meses'}

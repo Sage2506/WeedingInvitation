@@ -11,9 +11,9 @@ $playfair-display-serif: 'Payfair Display', serif;
 $playfair-display-sans: 'Payfair Display', sans-serif;
 
 body {
-  //background-image: url("./assets/lanterns.png"), linear-gradient($pink, $primary);
   background-image: url("./assets/lanterns.jpg");
   background-size: 400px;
+  //background-size: cover;
   font-family: $playfair-display-serif;
   color: white;
 }
@@ -142,12 +142,10 @@ section {
 }
 
 .card {
-  //background-color: #E1DED9;
   padding: 10px;
-  //border-radius: 16px;
-  //box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   display: grid;
-  //background-image: url("./assets/lanterns.jpg");
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
 
   >div {
     margin: auto;
@@ -157,6 +155,27 @@ section {
 .tick {
   font-size: 3em;
 }
+
+.display-block {
+  display: block;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.giftSection {
+  padding: 2px;
+  display: flex;
+  align-items: baseline;
+  font-size: 2em;
+
+  span {
+    margin: 0 15px;
+    font-size: 1em;
+  }
+}
+
 
 .date-presentation {
   display: flex;
@@ -231,6 +250,8 @@ section {
     height: 100%;
 
     p {
+      top: 30%;
+      margin-left: -3px;
       font-size: 1.3em;
     }
   }
@@ -319,6 +340,13 @@ section {
 @media only screen and (min-width: 889px) {
   .corner {
     width: 330px;
+  }
+
+  .castle-container {
+    p {
+      top: 33%;
+      font-size: 3.5em;
+    }
   }
 }
 
