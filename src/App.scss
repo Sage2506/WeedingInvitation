@@ -1,5 +1,5 @@
 /* Colors */
-$primary: #84739A;
+$primary: #C212EA;
 $secondary: #CBB7C3;
 $third: #E9DCD8;
 $fourth: #F5E5BC;
@@ -11,13 +11,16 @@ $playfair-display-serif: 'Payfair Display', serif;
 $playfair-display-sans: 'Payfair Display', sans-serif;
 
 body {
-  background-image: url("./assets/lanterns.png"), linear-gradient($pink, $secondary);
+  //background-image: url("./assets/lanterns.png"), linear-gradient($pink, $primary);
+  background-image: url("./assets/lanterns.jpg");
   background-size: 400px;
   font-family: $playfair-display-serif;
+  color: white;
 }
 
 .corner {
   position: absolute;
+  filter: invert(79%) sepia(93%) saturate(690%) hue-rotate(348deg) brightness(90%) contrast(94%);
 
   &.top-left {
     left: 0px;
@@ -52,7 +55,7 @@ body {
   gap: 40px;
   flex-direction: column;
   margin: 10px;
-  border: solid black;
+  border: solid #dfc911;
   position: relative;
 }
 
@@ -70,7 +73,7 @@ body {
     font-family: $cursive-font;
     font-weight: 400;
     position: absolute;
-    top: 48%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
     max-width: 65%;
@@ -83,8 +86,11 @@ body {
     height: 200px;
     width: 200px;
     object-fit: cover;
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     margin: 10px;
+    border: solid black 2px;
+    padding: 3px;
   }
 
   p {
@@ -119,7 +125,7 @@ body {
 section {
   display: flex;
   justify-content: center;
-  gap: 10px 20px;
+  gap: 40px 20px;
   flex-wrap: wrap;
 
   &.auto-flex {
@@ -136,11 +142,12 @@ section {
 }
 
 .card {
-  background-color: white;
+  //background-color: #E1DED9;
   padding: 10px;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  //border-radius: 16px;
+  //box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   display: grid;
+  //background-image: url("./assets/lanterns.jpg");
 
   >div {
     margin: auto;
@@ -161,8 +168,8 @@ section {
   }
 
   >p {
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
   }
 
   >div {
@@ -224,7 +231,7 @@ section {
     height: 100%;
 
     p {
-      font-size: 1.8em;
+      font-size: 1.3em;
     }
   }
 
@@ -252,8 +259,8 @@ section {
   .castle-container {
 
     p {
-      top: 47%;
-      font-size: 3em;
+      top: 32%;
+      font-size: 3.5em;
     }
   }
 
@@ -265,6 +272,7 @@ section {
   .cursive {
     p {
       font-size: 34px;
+      line-height: normal;
     }
   }
 
@@ -286,8 +294,8 @@ section {
 @media only screen and (min-width: 768px) {
   .castle-container {
     p {
-      top: 47%;
-      font-size: 4em;
+      top: 33%;
+      font-size: 3.5em;
     }
   }
 
@@ -300,6 +308,7 @@ section {
       font-size: 34px;
     }
   }
+
   .corner {
     width: 330px;
   }
@@ -325,7 +334,7 @@ section {
     height: 800px;
 
     p {
-      font-size: 5em;
+      font-size: 3.5em;
     }
   }
 

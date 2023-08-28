@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import castle from '../assets/disney_castle.png'
+import castle from '../assets/sol-sello.png'
 import corner from '../assets/Corner.svg'
 import church from '../assets/Church.jpeg'
 import saloon from '../assets/Saloon.jpg'
@@ -39,7 +39,7 @@ export default class Home extends Component {
         <img src={corner} alt="corner image" className='corner bottom-left' />
         <img src={corner} alt="corner image" className='corner bottom-right' />
         <section>
-          <div className="castle-container ">
+          <div className="castle-container">
             <img className="zoom-animation" src={castle} alt="Castle" />
             <p>
               Paulina
@@ -48,6 +48,13 @@ export default class Home extends Component {
               <br />
               Eduardo
             </p>
+          </div>
+        </section>
+        <section className='auto-flex' >
+          <div className='card'>
+            <div className=''>
+              <p>Realmente no necesitas a alguien para que te complete. Solo necesitas a alguien que te acepte completamente.</p>
+            </div>
           </div>
         </section>
         <section className='auto-flex'>
@@ -120,7 +127,7 @@ export default class Home extends Component {
               <p>&</p>
               <p>Sara Marisa Aranda Quintero</p>
               <hr style={{ 'width': '80%' }} />
-              <p>Imelda Patricia Humaran Ocampos</p>
+              <p style={{ 'lineHeight': 'normal' }}>Imelda Patricia Humaran Ocampo</p>
               <p>&</p>
               <p>Paul Ibarra Fuentes</p>
             </div>
@@ -134,7 +141,7 @@ export default class Home extends Component {
               <hr style={{ 'width': '80%' }} />
               <p>Marco Antonio Aranda Quintero</p>
               <p>&</p>
-              <p>Selene Sainz</p>
+              <p>Mirna Selene Sainz Sánchez</p>
             </div>
           </div>
         </section>
@@ -148,35 +155,28 @@ export default class Home extends Component {
             </div>
           </div>
         </section>
-        <section className='auto-flex' >
+        <section className='auto-flex'>
           <div className='card'>
-            <div className='cursive'>
-              <h3>Mensaje de los novios</h3>
-              <p>La vida es locomoción, si no estas en movimiento no estas viviendo; pero llega un momento en que tienes que huir de las cosas y tienes que empezar a correr hacia algo, mantenerse en movimiento, incluso si el camino no esta iluminado confía en que encontraras tu camino..!!</p>
-            </div>
+            <p>Regalo en efectivo</p>
+            <span className="material-symbols-outlined">
+              mail
+            </span>
+            <span className="material-symbols-outlined">
+              redeem
+            </span>
+            <p>BBVA: 4152 3141 4152 2964</p>
+            <p>Paulina Ibarra Humaran</p>
           </div>
         </section>
         <section className='auto-flex'>
           <div className='card'>
-            <ol>
-              <li>Recepcion</li>
-              <li>Cita mamadora</li>
-              <li>Cuenta de banco para transferencias</li>
-              <li>Nota de regalo en efectivo</li>
-              <li>Who's hosting</li>
-              <li>The request to come to the wedding</li>
-              <li>The names of the couple</li>
-              <li>The date and time</li>
-              <li>The location</li>
-              <li>Reception information</li>
-              <li>Dress code</li>
-              <li>Separate RSVP card</li>
-            </ol>
+            <p>Codigo de vestimenta:</p>
+            <p>Formal</p>
           </div>
         </section>
         <section>
           <div>
-            <h1>Solo faltan</h1>
+            <h1>Vivieron felices para siempre</h1>
             <FlipCountdown
               size={this.counterSize()}
               monthTitle={'Meses'}
