@@ -93,7 +93,7 @@ export default class Home extends Component {
               <hr style={{ 'width': '80%' }} />
               <p style={{ 'lineHeight': 'normal' }}>German Eduardo Salazar Quintero</p>
               <p>&</p>
-              <p>Sara Marisa Aranda Quintero</p>
+              <p style={{ 'lineHeight': 'normal' }}>Sara Marisa Aranda Quintero</p>
             </div>
           </div>
           <div className='card'>
@@ -101,11 +101,11 @@ export default class Home extends Component {
               <h3>Padrinos</h3>
               <p>Oliver Ibarra Fuentes</p>
               <p>&</p>
-              <p>Kenia Lizbeth Inzunza Aceviz</p>
+              <p style={{ 'lineHeight': 'normal' }}>Kenia Lizbeth Inzunza Aceviz</p>
               <hr style={{ 'width': '80%' }} />
               <p style={{ 'lineHeight': 'normal' }}>Marco Antonio Aranda Quintero</p>
               <p>&</p>
-              <p>Mirna Selene Sainz Sánchez</p>
+              <p style={{ 'lineHeight': 'normal' }}>Mirna Selene Sainz Sánchez</p>
             </div>
           </div>
         </section>
@@ -163,11 +163,10 @@ export default class Home extends Component {
             <span className="material-symbols-outlined">
               mail
             </span>
-            <span className="material-symbols-outlined">
-              redeem
-            </span>
-            <p>BBVA: 4152 3141 4152 2964</p>
             <p>Paulina Ibarra Humaran</p>
+            <p>TARJETA: 4152 3141 4152 2964</p>
+            <p>CUENTA BBVA: 1578299981</p>
+            <p>CLABE: 012180015782999811</p>
           </div>
         </section>
         <section className='auto-flex'>
